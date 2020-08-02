@@ -5,6 +5,7 @@
 *.dvi
 *.flx
 *.xdv
+__latexindent_temp.tex
 
 # PDF output - usually a bad idea to keep this in Git
 *.pdf
