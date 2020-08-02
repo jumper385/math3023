@@ -1,0 +1,44 @@
+\documentclass[a4paper, 11pt, twoside]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{inputenc}
+
+\title{
+    \large \textbf{MATH3023 - Lecture 1} \\
+    Revision \& Pre-Requesite Knowledge
+}
+\author{Henry Chen}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section{Integration}
+\emph{All integrals in this unit will be solvable!}
+We treat integrals like ``ares'' under the curve.
+\subsection{The Fundamental Theorem of Calculus}
+If the function $f$ is continuous between $[a,b]$, then $F$ is an \emph{antiderivative} of $f$.
+\subsection{Indefinite Integrals}
+We are looking for the most \emph{general} antiderivative. They will always have $+C$ at the end of the function. 
+
+\section{Techniques of Integration}
+\subsection{Integration by Simple Substitution}
+Make the integral look like something on the formula sheet. 
+\subsection{Integration by Trigonometric Substitution}
+If the simple substitution fails, try to turn everything into $sin$ and $cos$. This involves using trig functions. An example of this is below:
+\[
+    \int{\sin^{m}{x}\cos^{n}{x}} \,\mathrm{d}x
+\]
+If either $m$, $n$ or both are odd, we peel off one of the odd powers and use the trigonometric identity $\sin^{2}{x} + \cos^2{x} = 1$ \emph{and} use $u=\sin{x}$ or $u=\cos{x}$ to the peeled off powers.
+
+If either $m$, $n$ or both are even, we use the half-angle formula $\cos(2x) = \cos^{2}{x} - 1 = 1 - 2\sin^{2}{x} $ for either $\sin^{2}{x}$ or $\cos^{2}{x}$.
+
+\[
+    \sin^{2}{x} = \frac{1}{2}[1-\cos{2x}] \, , \, \cos^{2}{x} = \frac{1}{2}[1+\cos{2x}]
+\]
+\subsection{Integration by Inverse Trigonometric Substitution}
+This is used to get rid of the square root of a substitution and getting rid of it is impossible with a simple substitution. We rely on a reference right angle triangle to achieve this technique. All formulae are on the formula sheet.
+
+\end{document}

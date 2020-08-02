@@ -1,0 +1,87 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[margin=1in, right=2in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{inputenc}
+
+\title{
+    \large \textbf{MATH3023 - Lecture 1} \\
+    Revision \& Pre-Requesite Knowledge
+}
+\author{Henry Chen}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section{Integration}
+\emph{All integrals in this unit will be solvable!}
+We treat integrals like ``areas'' under the curve.
+\subsection{The Fundamental Theorem of Calculus}
+If the function $f$ is continuous between $[a,b]$, then $F$ is an \emph{antiderivative} of $f$.
+\subsection{Indefinite Integrals}
+We are looking for the most \emph{general} antiderivative. They will always have $+C$ at the end of the function. 
+
+\section{Techniques of Integration}
+\subsection{Integration by Simple Substitution}
+Make the integral look like something on the formula sheet. 
+\subsection{Integration by Trigonometric Substitution}
+If the simple substitution fails, try to turn everything into $sin$ and $cos$. This involves using trig functions. An example of this is below:
+\[
+    \int{\sin^{m}{x}\cos^{n}{x}} \,\mathrm{d}x
+\]
+If either $m$, $n$ or both are odd, we peel off one of the odd powers and use the trigonometric identity $\sin^{2}{x} + \cos^2{x} = 1$ \emph{and} use $u=\sin{x}$ or $u=\cos{x}$ to the peeled off powers.
+
+If either $m$, $n$ or both are even, we use the half-angle formula $\cos(2x) = \cos^{2}{x} - 1 = 1 - 2\sin^{2}{x} $ for either $\sin^{2}{x}$ or $\cos^{2}{x}$.
+
+\[
+    \sin^{2}{x} = \frac{1}{2}[1-\cos{2x}] \, , \, \cos^{2}{x} = \frac{1}{2}[1+\cos{2x}]
+\]
+\subsection{Integration by Inverse Trigonometric Substitution}
+This is used to get rid of the square root of a substitution and getting rid of it is impossible with a simple substitution. We rely on a reference right angle triangle to achieve this technique. All formulae are on the formula sheet.
+
+\subsection{Integration by Partial Fractions}
+This is a technique used to integrate rational functions - breaking them down into simple component fractions. 
+
+This method works \emph{If and only if} the degree of the top is less than the degree of the bottom. If the degree of the top is more than the bottom, polynomial division is required to decompose it into a working fraction form.
+
+\subsection{Integration by Parts}
+This method is used where integrating products of functions using substitution is not working. The table in the datasheet does not garuantee 100\% but it should work most of the time.
+
+\section{Double Integrals}
+Double Integrals are used to find the volume bound by a suface in the region of the $x$-$y$-plane. There is never an ``indefinite double integral''. A double integral about a rectangular area on the x-y-plane is as follows: 
+
+\[
+    \iint_R f(x,y) \, \mathrm{d}A : R = \{(x,y) | a \leq x \leq b \ , c \leq y \leq d \}   
+\]
+
+\subsection{Double Integral over a Rectangular Region}
+
+\emph{Fubini's Theorem} explains that a double integral is calculated by holding a variable as a constant and integrating the `free' variable - working from the inside out.
+
+\subsection{Double Integral over a Bounded Region}
+For a general region, in theory, a double integral is possible - provided we can integrate the region function. There are two types of bounded regions - ``Regions between the graphs of two functions of $x$'' and ``Regions between the two funtions of $y$''. This therefore leads to the following algorithms:
+
+\subsubsection{Type 1: Regions between a function of $x$ i.e. $f(x)=y$}
+Move from inside to out when performing this method - making sure that the values for $a$ and $b$ are numbers rather than variables.
+\[
+    \iint_R f(x,y) \, \mathrm{d}A = \int_{a}^{b} \left( \int_{g(x)}^{h(x)} f(x,y) \, \mathrm{d} y \right) \, \mathrm{d}x
+\]
+
+\subsubsection{Type 2: Regions between a function of $y$ i.e. $F(y)=x$}
+\[
+    \iint_R f(x,y) \, \mathrm{d}A = \int_{a}^{b} \left( \int_{G(y)}^{H(y)} f(x,y) \, \mathrm{d}x \right) \, \mathrm{d}y \, R=\{ a < y < b , G(y) < x < H(y) \} 
+\]
+
+\section{Triple Integrals}
+Integrating 4-D regions with three variables. We are calculating the values that are bound by a 3-D region. The steps for calculation is the same as integration is the same - working from the inside out and integrating the reuslt of the double integral with respect to the third and final axis.
+
+\[
+    \iiint_T f(x,y,z) \, \mathrm{d}V 
+\]
+
+\section{Determinants}
+The determinant is just a number and its value is meaningless. \emph{It is only import if it is 0 or not}. If the determinant is zero, there isn't much we can do with it.
+
+\end{document}
