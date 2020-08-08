@@ -1,0 +1,73 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[margin=1in, right=2in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{inputenc}
+
+\title{
+    \large \textbf{MATH3023 - Lecture 2}
+}
+\author{Henry Chen}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section{Vector Valued Functions}
+Vector Values Functions represent functions as parameterizations to ensure you can create a function in one go. In this this unit, we will be dealing with 2 and 3 dimensional vector spaces - creating curves and parameterizations of each axis or coordinate function in their respective vector spaces. 
+
+For a valid parameterization, we need to specify the domain of $r(t): \, t\in [a,b]$ - with $r(a)$ being start and $r(b)$ being the end point of the curve. 
+
+\subsection{The case of a Circle}
+A good example of this is a circle - where it is represented as $y=\pm\sqrt{r^2-x^2}$. It is clear that a circle cannot be represented as a ginel function $f(x)$ however, by parameterising this function into its $x(t)$ and $y(t)$, we're able to generate a circle in a single function. Typically, we use $\sin(t)$ and $\cos(t)$ to define the parameters of the circle.
+
+\section{Differentiating Vector Valued Functions}
+Gemometrically, the vector will be tangent to the curve. By deriving the parameterized functions, we are able to get the speed, acceleration, velotiy and trajectory of the curve. Furthermore, the length of a curve is found by integrating the \emph{norm} of the velocity vector. $|v(t)|$. It is entirely possible to also use trig identities to remove square roots from the integration of a curve. 
+
+\subsection{Path Integrals}
+integration but along a curve in 3-d space.
+
+\section{Vector Field}
+A \emph{field} is a function that assigns a quantity to each point in a region. Furthermore, a \emph{scalar field} is a function that assigns a scalar value to each point in the field. It is also critical to know that a \emph{vector field} is a function that assigns a vector value to each point. 
+
+We use vector fields to represent movement in 3-D space - mapping out direction and magnitude for each particle. In the example of fluids, it maps out a velocity distribution of the particles within a system. 
+
+\subsection{Gradient Vector}
+If we want too know what each particle is doing at each point, we require a vector field to describe what is going on. The gradient vector points in the direction of greatest increase. The gradient vector is described as the following: 
+
+\begin{equation}
+    \begin{split}
+        \triangledown f(x,y) &= \mathrm{grad}f(x,y) \\ 
+        &= (f_x(x,y), f_y(x,y)),   \\
+    \end{split}
+\end{equation}
+
+\section{Divergence and Curl}
+Divergence and Curl are scalar fields which act upon vector fields. \emph{Divergence} is applied to a vector field to form a scalar field. Likewise, a \emph{curl} is applied to a vector field to form another vector field. 
+
+\subsection{The Nabla}
+A nabla equation is a vector differential operator. The gradient vector is an example of a nabla function that generates a scalar product of a multivariable function $f$ with a vector `$\nabla$'.
+\begin{equation}
+    \begin{split}
+        \nabla = \left(
+            \frac{\partial}{\partial{x}}, \frac{\partial}{\partial{y}},\frac{\partial}{\partial{z}}
+            \right)
+    \end{split}
+\end{equation}
+
+\subsection{The Divergence}
+The divergence of a nabla function that measures local expansion or compression. It can be treated as if it is a `dot-product' of $\nabla$ operator and the vector \textbf{F}.
+\[
+    \nabla \cdot \mathbf{F} = \frac{\partial{P}}{\partial{x}} + \frac{\partial{Q}}{\partial{y}} + \frac{\partial{R}}{\partial{z}}  
+\]
+
+\subsection{The Curl}
+Curl of a vector field returns a vector field that measures the \emph{twisting} of a function. It can be thought of as the cross-product of \textbf{F}. It is strictly a 3-D nabla function due to its property as a cross-product.
+
+\[
+    \nabla \times \mathbf{F} = \left( \frac{\partial{R}}{\partial{y}} - \frac{\partial{Q}}{\partial{z}}, \frac{\partial{P}}{\partial{z}} - \frac{\partial{R}}{\partial{x}}, \frac{\partial{Q}}{\partial{y}} - \frac{\partial{P}}{\partial{y}}\right)
+\]
+
+
+\end{document}
